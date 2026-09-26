@@ -1,0 +1,32 @@
+# --- Angular / Frontend ---
+**/node_modules/
+**/dist/
+**/.angular/
+**/tmp/
+**/out-tsc/
+**/.sass-cache/
+**/coverage/
+npm-debug.log
+yarn-error.log
+
+# --- InterSystems IRIS / Backend ---
+# Ignore the Durable %SYS / Data volume folder
+# This matches the 'iris-data' folder we tried earlier
+iris-data/
+*.log
+*.lck
+*.obj
+*.vcp
+build.log
+
+# --- Docker ---
+.docker/
+# If you use environment variable files
+.env
+
+# --- IDEs & System ---
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.history

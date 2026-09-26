@@ -1,0 +1,12 @@
+    zn "%SYS"
+    do ##class(Security.Users).UnExpireUserPasswords("*")
+    set dir = $$getlogdir^SystemPerformance()
+    do run^SystemPerformance("test")
+    zpm "install passwordless"
+    zn "USER"
+    zpm "load /home/irisowner/dev/ -v":1
+    write $SYSTEM.OBJ.CompilePackage("SysPerf","ckb")
+    //Load SystemPerformance sample file for dashboard
+    set rs = ##class(%ResultSet).%New("%Library.File:FileSet")
+    If dir'="" Set sc = rs.Execute(dir, "*.html") While rs.Next() { do ##class(SysPerf.Loader).LoadFile(dir_"/"_rs.Name,.st) }
+    halt

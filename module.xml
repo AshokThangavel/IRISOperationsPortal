@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Export generator="Cache" version="25">
+  <Document name="IRISOperationsPortal.ZPM">
+    <Module>
+      <Name>IRISOperationsPortal</Name>
+      <ExternalName>IRISOperationsPortal</ExternalName>
+      <Version>1.0.0</Version>
+      <Description></Description>
+      <Keywords></Keywords>
+      <Packaging>module</Packaging>
+      <Resource Name="src.PKG"/>
+      <LifecycleClass>%IPM.Lifecycle.Module</LifecycleClass>
+    </Module>
+  </Document>
+</Export>
